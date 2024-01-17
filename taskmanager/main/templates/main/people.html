@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <title>Doc</title>
+    <link rel="stylesheet" href="{% static 'main/css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/calendar.css' %}">
+</head>
+<body>
+         <div class="header">
+       
+        <nav>
+          <div id="LOGO"><img src="{% static 'main/img/log.png' %}" alt="logo"></div>
+          <h1 id="text">BuildDoc</h1>
+          
+          <div id="main">
+            <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()" >&#9776; </span>
+          </div>
+          <div class="container">
+            <form method="GET" action="{% url 'home' %}">
+            <input type="text" maxlength= "30" placeholder="Search" class="searchbar">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button">
+            </form>
+          </div>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{% url 'home' %}">главное</a>
+            <a href="{% url 'tasks' %}">Задани</a>
+            
+            <a href="{% url 'people' %}">Календарь</a>
+            <a href="{% url 'project' %}">Проект</a>
+            <a href="{% url 'doc' %}">Документы</a></div>
+            
+            
+            
+          </nav>
+          <div class="dropdown">
+            <button  class="but" ><img src="{% static 'main/img/ava.png' %}" alt="avatar"></button>
+            <div  class="dropdown-content">
+            <a href="{% url 'profile' %}">Мой профиль</a>
+           
+            <a href="#"></a><br><br>
+            <hr>
+            <a href="{% url 'reg' %}">Выход</a>
+          </div>
+      </div>
+      <button class="btn-toggle"><img src="{% static 'main/img/dasd.png' %}" alt=""></button>
+    </div>
+
+      <div id="calPeriod">
+        <input id="calBack" type="button" value="&lt;">
+        <select id="calMonth"></select>
+        <input type="number" id="calYear">
+        <input id="calNext" type="button" value="&gt;">
+      </div>
+  
+      <!-- (B) CALENDAR -->
+      <div id="calWrap"></div>
+  
+      <!-- (C) EVENT FORM -->
+      <dialog id="calForm"><form method="dialog">
+        <div id="evtClose">X</div>
+        <h2>CALENDAR EVENT</h2>
+        <label>Date</label>
+        <input type="text" id="evtDate" readonly>
+        <label>Details</label>
+        <textarea id="evtTxt" required></textarea>
+  
+        <input id="evtDel" type="button" value="Delete">
+        <input id="evtSave" type="submit" value="Save">
+      </form></dialog>
+</body>
+<script src="{% static 'main/js/main.js' %}"></script>
+<script src="{% static 'main/js/calendar.js' %}"></script>
+
+</html>

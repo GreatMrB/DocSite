@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <title>page 1</title>
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+</head>
+<body>
+    <div class="header">
+        <nav>
+          <div id="LOGO"><img src="{% static 'main/img/log copy.png' %}" alt="logo"></div>
+          <div id="text"><h1 >BuildDoc</h1></div>
+          <div class="log">
+            <li><a href="{% url 'log' %}">Login</a></li>
+          </div>
+          <div class="reg">
+            <li><a href="{% url 'register' %}">Register</a></li>
+          </div>
+     
+          </nav>
+          
+        </div>
+            
+        <div class="content">
+            <h3>Проектирование информационной системы документооборота проектной деятельности</h3>
+            <p>Она может включать в себя функции, такие как учет задач, управление проектными ресурсами, отслеживание прогресса проекта и управление коммуникациями. 
+                Цель разработки такой системы - улучшить эффективность и организацию проектных деятельностей.</p>
+            
+        </div> 
+        <div class="img"><img src="{% static 'main/img/вввв.jpg' %}" alt=""></div> 
+
+
+        
+          
+    
+</body>
+
+</html>

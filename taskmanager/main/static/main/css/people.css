@@ -1,0 +1,71 @@
+.people-text{
+    margin-top: 50px;
+    font-size: 15px;
+    color: #d6d5d5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 145px;
+}
+.obz p{
+    color: rgb(120, 120, 121);
+    font-size: 17px;
+    line-height: -10;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.low{
+    
+    background-color: rgb(89, 89, 135);
+    height: 1px;
+}
+.card{
+  width: 162px;
+  height: 120px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.card:hover{
+  background-color: rgb(99, 104, 104);
+  
+}
+.card_ava img{
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 50px;
+  
+}
+.card h3{
+  font-size: 14px;
+  color: rgb(253, 252, 252);
+  margin-left: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+.card_ava2 img{
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 10px;
+  
+}
+.card_ava2 h3{
+  color:  rgb(253, 252, 252);
+  font-size: 13px;
+  float: right;
+  margin-right: 86%;
+  margin-top: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.lol{
+    
+  background-color: rgb(89, 89, 135);
+  height: 1px;
+  margin-top: 15px;
+}

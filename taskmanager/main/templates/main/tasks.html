@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="{% static 'main/css/Style.css' %}">
+</head>
+
+<body>
+  <div class="header">
+
+    <nav>
+      <div id="LOGO"><img src="{% static 'main/img/log.png' %}" alt="logo"></div>
+      <h1 id="text">BuildDoc</h1>
+
+      <div id="main">
+        <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()">&#9776; </span>
+      </div>
+      <div class="container">
+        <form method="GET" action="{% url 'upload' %}">
+        <input type="text" maxlength="30" placeholder="Search" class="searchbar">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button">
+        </form>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'home' %}">Главное</a>
+        <a href="{% url 'tasks' %}">Задани</a>
+        <a href="{% url 'people' %}">Каленьдарь</a>
+        <a href="{% url 'project' %}">Проекты</a>
+        <a href="{% url 'doc' %}">Документы</a>
+      </div>
+
+
+
+    </nav>
+    <div class="dropdown">
+      <button class="but"><img src="{% static 'main/img/ava.png' %}" alt="avatar"></button>
+      <div class="dropdown-content">
+        <a href="{% url 'profile' %}">мой профиль</a>
+
+        <a href="#"></a><br><br>
+        <hr>
+        <a href="{% url 'reg' %}">Выход</a>
+      </div>
+    </div>
+    <button class="btn-toggle"><img src="{% static 'main/img/dasd.png' %}" alt=""></button>
+  </div>
+  <div class="tt">
+    <h1>Задани</h1>
+  </div>
+ 
+  
+  <div class="add">
+
+    
+<div class="css-1dbjc4n" style="background-color: rgb(89, 89, 135); height: 1px;"></div><br>
+
+  <form action={% url 'add' %}>
+  <button class="cssbuttons-io-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+    <span>Add</span>
+  </button>
+</form>
+</div>
+{% block content  %}
+  {%  if tasks  %}
+    {% for el in tasks %}
+      <div class=first-main>
+        {{el.title}}</div>
+        <div class=first> {{el.task}} 
+        
+        </div><br>
+        <div class="css-1dbjc4n" style="background-color: rgb(89, 89, 135); height: 1px;"></div>
+    {% endfor %}  <br>
+  {% else %}
+        <div class='first-main'>Нету задании!!</div>
+  {% endif %}
+{% endblock content  %}
+
+
+
+
+
+</body>
+<script src="{% static 'main/js/main.js' %}"></script>
+</html>

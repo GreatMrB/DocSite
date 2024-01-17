@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <title>ADD TASKS</title>
+    <link rel="stylesheet" href="{% static 'main/css/Style.css' %}">
+</head>
+<body>
+    <div class="header">
+       
+        <nav>
+          <div id="LOGO"><img src="{% static 'main/img/log.png' %}" alt="logo"></div>
+          <h1 id="text">BuildDoc</h1>
+          
+          <div id="main">
+            <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()" >&#9776; </span>
+          </div>
+          <div class="container">
+            <input type="text" maxlength= "30" placeholder="Search" class="searchbar">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button">
+          </div>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{% url 'home' %}">Главное</a>
+            <a href="{% url 'tasks' %}">Задани</a>
+            
+            <a href="{% url 'people' %}">Календарь</a>
+            <a href="{% url 'project' %}">Проект</a>
+            <a href="{% url 'doc' %}">Документы</a></div>   
+          </nav>
+          <div class="dropdown">
+            <button  class="but" ><img src="{% static 'main/img/ava.png' %}" alt="avatar"></button>
+            <div  class="dropdown-content">
+            <a href="{% url 'profile' %}">Мой профиль</a>
+           
+            <a href="#"></a><br><br>
+            <hr>
+            <a href="{% url 'reg' %}">Выход</a>
+            </div>
+        </div>
+        <button class="btn-toggle"><img src="{% static 'main/img/dasd.png' %}" alt=""></button>
+      </div>
+       {% block content %}
+      
+       <div class="td">
+        <h2>Сотрудник</h2>
+      </div>
+      <form method="post" class="beka">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.work }}<br>
+        {{ form.name }}<br>
+        {{ form.job }}<br>
+        <button class='add-task'>Добавит</button>
+        <span>{{ error }}</span>
+
+ </form>
+
+        {% endblock content %} 
+        
+</body>
+<script src="{% static 'main/js/main.js' %}"></script>
+</html>

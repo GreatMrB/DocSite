@@ -1,0 +1,30 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{% static 'main/css/lostyle.css' %}">
+<body>
+    <div class="form-box">
+        <form action="" method="POST" class="form">
+            {% csrf_token %}
+            <span class="title">Login</span>
+            <span class="subtitle">Welcom</span>
+            {{ form}}
+            
+            <div class="form-container">
+            </div>
+            <button type="submit" >Login</button>
+        </form>
+        {% for message in mesages %}
+            <p id="mesages">{{mesage}}</p>
+        {% endfor %}
+        <div class="form-section">
+          <p> <a href="{% url 'register' %}">Register</a> </p>
+        </div>
+        </div>
+
+
+</body>
+</html>

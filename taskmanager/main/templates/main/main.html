@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <title>Doc</title>
+    <link rel="stylesheet" href="{% static 'main/css/Style.css' %}">
+</head>
+<body>
+         <div class="header">
+       
+        <nav>
+          <div id="LOGO"><img src="{% static 'main/img/log.png' %}" alt="logo"></div>
+          <h1 id="text">BuildDoc</h1>
+          
+          <div id="main">
+            <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()" >&#9776; </span>
+          </div>
+    
+          <div class="container">
+            <form method="GET" action="{% url 'tasks' %}">
+              
+              {% csrf_token %}
+              {{ form }}
+            <input type="text" maxlength= "30" onkeyup="search_doc()" placeholder="Search" class="searchbar" id="inputSearch">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button" id="clear">
+        
+
+          </form>          
+          </div>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{% url 'home' %}">Главное</a>
+            <a href="{% url 'tasks' %}">Задани</a>
+            
+            <a href="{% url 'people' %}">Каленьдар</a>
+            <a href="{% url 'project' %}">Проект</a>
+            <a href="{% url 'doc' %}">Документы</a></div>
+            
+            
+            
+          </nav>
+          <div class="dropdown">
+            <button  class="but" ><img src="{% static 'main/img/ava.png' %}" alt="avatar"></button>
+            <div  class="dropdown-content">
+            <a href="{% url 'profile' %}">Мой профиль</a>
+           
+            <a href="#"></a><br><br>
+            <hr>
+            <a href="{% url 'reg' %}">Выход</a>
+            </div>
+        </div>
+        <button class="btn-toggle"><img src="{% static 'main/img/dasd.png' %}" alt=""></button>
+      </div>
+      
+        
+      <div class="iii">
+        
+        <span>Быстрые переходы</span>
+       
+      </div>
+      <div class="info0">
+      <div class="info">
+        <div class="header">
+            <div class="img-box">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+                  <img src="{% static 'main/img/qwer.png' %}" alt="" width="30px" height="30px">
+                </svg>
+            </div>
+            <h1 class="title">Задани</h1>
+        </div>
+    
+        <div class="content">
+            <p>
+              Добавление задаии 
+            </p>
+    
+            <a class="btn-link" href="{% url 'tasks' %}">Читать дальше</a>
+        </div>
+    </div>
+    <div class="info">
+      <div class="header">
+          <div class="img-box">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+                <img src="{% static 'main/img/qwer.png' %}" alt="" width="30px" height="30px">
+              </svg>
+          </div>
+          <h1 class="title">Каленьдар</h1>
+      </div>
+  
+      <div class="content">
+          <p>
+              Заметки и добавление времени
+          </p>
+  
+          <a class="btn-link" href="{% url 'people' %}">Читать дальше</a>
+      </div>
+  </div>
+  <div class="info">
+    <div class="header">
+        <div class="img-box">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+              <img src="{% static 'main/img/qwer.png' %}" alt="" width="30px" height="30px">
+            </svg>
+        </div>
+        <h1 class="title">Проект</h1>
+    </div>
+
+    <div class="content">
+        <p>
+            Добавление проектов
+        </p>
+
+        <a class="btn-link" href="{% url 'project' %}">Читать дальше</a>
+    </div>
+</div>
+  <div class="info">
+  <div class="header">
+      <div class="img-box">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+            <img src="{% static 'main/img/qwer.png' %}" alt="" width="30px" height="30px">
+          </svg>
+      </div>
+      <h1 class="title">Докумены</h1>
+  </div>
+
+  <div class="content">
+      <p>
+          Различные документы
+      </p>
+
+      <a class="btn-link" href="{% url 'doc' %}">Читать дальше</a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<footer class="footer">
+  <h2>DOC</h2>
+  <p>2023 ALL RIGHT</p>
+</footer>
+</body>
+<script src="{% static 'main/js/main.js' %}"></script>
+<script src="{% static 'main/js/search.js' %}"></script>
+</html>

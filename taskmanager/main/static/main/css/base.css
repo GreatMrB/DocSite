@@ -1,0 +1,112 @@
+nav{
+    width: 100%; 
+    margin: 0 0;
+    
+     
+ }
+ nav:before{
+     content: "";
+     display: block;
+     height: 100px;
+     width: 100%;
+     background: #26304A;
+     position: fixed;
+     left: 0;
+     top: 0;
+     z-index:-1;
+ }
+
+ .anoth{
+    width: 100%; 
+    margin: 0 0;
+    
+     
+ }
+ .anoth:before{
+     content: "";
+     display: block;
+     height: 50px;
+     width: 100%;
+     background: #26304A;
+     position: fixed;
+     left: 0;
+     top: 0;
+     z-index:-1;
+ }
+ 
+ #LOGO img{
+    width: 70px;
+    height: 70px;
+    margin-left: 250px;
+    display: block;
+    float: left;
+    margin-top: 8px;
+    position: relative;
+    
+ 
+ }
+ #text h1{
+    margin-left: 30px;
+    color: white;
+    margin-top: 25px;
+    float: left;
+    font-size: 35px;
+    position: relative;
+    
+ }
+ .log li{
+    list-style: none;
+ }
+ .reg li{
+    list-style: none;
+ }
+ 
+.log li a{
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    margin-right: 150px;
+    font-size: 25px;
+    margin-top: 20px;
+    background-color: rgb(45, 92, 153);
+    padding: 10px 20px;
+    border-radius: 30px;
+    position: relative;
+   
+}
+.reg li a{
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    margin-right: 35px;
+    font-size: 25px;
+    margin-top: 20px;
+    background-color: rgb(45, 92, 153);
+    padding: 10px 20px; 
+    border-radius: 30px;
+    position: relative;
+   
+}
+.content{
+    margin-right: 700px;
+    margin-left: 250px;
+}
+.content h3{
+    margin-top: 110px;
+    width: 450px;
+    float: left;
+    font-size: 30px;
+    
+}
+.content p{
+    float: left;
+    font-size: 20px;
+}
+.img img{
+    width: 480px;
+    height: 480px;
+    margin-top: 70px;
+    margin-left: 50px;
+}

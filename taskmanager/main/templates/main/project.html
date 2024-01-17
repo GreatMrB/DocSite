@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="{% static 'main/css/project.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/Style.css' %}">
+</head>
+
+<body>
+  <div class="header">
+
+    <nav>
+      <div id="LOGO"><img src="{% static 'main/img/log.png' %}" alt="logo"></div>
+      <h1 id="text">BuildDoc</h1>
+
+      <div id="main">
+        <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()">&#9776; </span>
+      </div>
+      <div class="container">
+        <form method="GET" action="{% url 'doc' %}">
+        <input type="text" maxlength="30" placeholder="Search" class="searchbar">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button">
+        </form>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'home' %}">Главное</a>
+        <a href="{% url 'tasks' %}">Задани</a>
+        <a href="{% url 'people' %}">Календарь</a>
+        <a href="{% url 'project' %}">Проект</a>
+        <a href="{% url 'doc' %}">Документы</a>
+      </div>
+
+
+
+    </nav>
+    <div class="dropdown">
+      <button class="but"><img src="{% static 'main/img/ava.png' %}" alt="avatar"></button>
+      <div class="dropdown-content">
+        <a href="{% url 'profile' %}">Мой профиль</a>
+
+        <a href="#"></a><br><br>
+        <hr>
+        <a href="{% url 'reg' %}">Выход</a>
+      </div>
+    </div>
+    <button class="btn-toggle"><img src="{% static 'main/img/dasd.png' %}" alt=""></button>
+  </div>
+  {% block content  %}
+  <div class="tt">
+    <h1>Projects</h1>
+  </div>
+  <div class="vl"></div>
+  <div class='in-project' type="button " value="Change 1" onclick="changeCollection(el_1);">Бизнес проект</div>
+ 
+  <div class='project-group'>
+  <h4>project group</h4></div>
+  
+  <div class='in-project4' type="button " value="Change 1" onclick="changeCollectionы(el_2);">Эконом проект</div> 
+
+<div class="button">
+  
+    <a href="#" id="open_pop_up">+</a>
+</div>
+
+<div class="pop_up" id="pop_up">
+    <div class="pop_up_container">
+        <div class="pop_up_body" id="pop_up_body">
+            <p>Add project</p>
+            <form action="" method='POST'>
+              {% csrf_token %}
+              {{ form.title }}<br>
+              {{ form.project }}
+                <button>Create</button>
+            
+            <div class="pop_up_close" id="pop_up_close">X</div>
+        </div>
+      </form>
+      
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<div1 class='project' >Создать сайт про бизнеса</div1>
+<div class="line"></div>
+
+ </div>
+
+ 
+  
+{% endblock content %}
+
+</body>
+<script src="{% static 'main/js/main.js' %}"></script>
+<script src="{% static 'main/js/model.js' %}"></script>
+</html>

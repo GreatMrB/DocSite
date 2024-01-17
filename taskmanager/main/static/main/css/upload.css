@@ -1,0 +1,226 @@
+.td{
+    position: relative;
+    margin-right: 1225px;
+    float: right;
+    margin-top:10px;
+    color: #6b6a6a;
+    font-size:25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #left_text {
+    color: #e2e4e1;
+    margin-left: 10px;
+    float: left;
+    font-size: 15px;
+}
+
+#middle_text {
+    color: #fafcf8;
+    font-size: 15px;
+   float: left;
+   margin-left: 200px;
+}
+#right_text {
+    color: #eaece9;
+    font-size: 15px;
+    float: left;
+    margin-left: 200px;
+}
+#rig_text {
+    color: #eaece9;
+    font-size: 15px;
+    float: left;
+    margin-left: 200px;
+}
+#r_text {
+    color: #eaece9;
+    font-size: 15px;
+    float: left;
+    margin-left: 200px;
+}
+.hr{
+    margin-top: 40px;
+}
+#ft_text {
+    color: #e2e4e1;
+    margin-right: 115px;
+    margin-left: 10PX;
+    float: left;
+    font-size: large;
+    font-weight:900;
+    
+}
+#le_text{
+    color: #e2e4e1;
+    margin-right: 190PX;
+    margin-left: 10PX;
+    float: left;
+    font-size: 15px;
+    margin-top: 22PX;
+    opacity: .4;
+}
+ #ht_text{
+    color: #e2e4e1;
+    margin-right: 110PX;
+    margin-left: 90PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+    margin-top: 22PX;
+}
+#g_text {
+    color: #e2e4e1;
+    margin-right: 190PX;
+    margin-left: 10PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+    margin-top: 22PX;
+}
+#l_text {
+    color: #e2e4e1;
+    margin-left: 10PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+  
+}
+.hs{
+    margin-top: 70px;
+}
+.hp{
+    margin-top: 60px;
+}
+#xt{
+    color: #e2e4e1;
+    margin-right: 132PX;
+    margin-left: 90PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+    margin-top: 22PX;
+}
+#ext {
+    color: #e2e4e1;
+    margin-right: 190PX;
+    margin-left: 10PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+    margin-top: 22PX;
+}
+#t{
+    color: #e2e4e1;
+    margin-right: 115PX;
+    margin-left: 90PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+    margin-top: 22PX;
+}
+
+
+
+
+
+
+
+
+
+#be {
+    color: #fafcf8;
+    font-size: 15px;
+   float: left;
+   margin-left: 15px;
+}
+#ka {
+    color: #eaece9;
+    font-size: 15px;
+    float: left;
+    margin-left: 200px;
+}
+#su{
+    color: #eaece9;
+    font-size: 15px;
+    float: left;
+    margin-left: 900px;
+}
+#do {
+    color: #e2e4e1;
+    margin-right: 115px;
+    margin-left: 15PX;
+    float: left;
+    font-size: large;
+    font-weight:900;
+    
+}
+.mes{
+    color: #e2e4e1;
+    margin-right: 190PX;
+    margin-left: 100PX;
+    float: left;
+    font-size: 15px;
+    margin-top: 22PX;
+    opacity: .4;
+    cursor: pointer;
+}
+ #tos{
+    color: #e2e4e1;
+    margin-right: 50PX;
+    margin-left: 650PX;
+    float: left;
+    font-size: 15px;
+    opacity: .4;
+    margin-top: 22PX;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+  }
+  
+  /* Модальное содержание/коробка */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  }
+  
+  /* Кнопка закрытия */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
